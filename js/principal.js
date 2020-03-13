@@ -1,21 +1,21 @@
 //Desarrollado Por Juan Felipe Valencia Murillo.
-var http="http://";
+var host=location.origin+'/proes/#!/';
 $(document).ready(function(){
 	setTimeout(function(){
 	url=window.location+"";
-	if(window.location==http+document.domain+'/proes/#!/'){
+	if(location.href==host){
 		boton=document.getElementById("boton1");
 		boton.style.color="#5BC800";
 		boton.style.borderTop="5px solid white";
 		boton.style.borderBottom="5px solid #5BC800";
 	}
-	else if(window.location==http+document.domain+'/proes/#!/proyectos'){
+	else if(location.href==host+'proyectos'){
 		boton=document.getElementById("boton2");
 		boton.style.color="#5BC800";
 		boton.style.borderTop="5px solid white";
 		boton.style.borderBottom="5px solid #5BC800";
 	}
-	else if(window.location==http+document.domain+'/proes/#!/desarrollador'){
+	else if(location.href==host+'desarrollador'){
 		boton=document.getElementById("boton3");
 		boton.style.color="#5BC800";
 		boton.style.borderTop="5px solid white";
