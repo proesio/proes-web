@@ -54,3 +54,6 @@ function cerrarModal(id_modal){
 	modal=document.getElementById(id_modal);
 	modal.style.display="none";
 }
+function posicionarScrollY(x=0,y=0){
+	if(window.scrollY) window.scroll(x,y);
+}
