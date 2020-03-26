@@ -1,93 +1,29 @@
 <!--Desarrollado Por Juan Felipe Valencia Murillo.-->
-<style type="text/css">
-	.con-info{
-		width:auto;
-		max-width:900px;
-	}
-	.enc-info{ 
-		width:auto;
-		text-align:center;
-	}
-	.info{
-		width:auto;
-		height:auto;
-		text-align:justify;
-	}
-	.perfil{
-		border-radius:50%;
-		border:5px solid #5BC800;
-		cursor:pointer;
-		width:200px;
-		height:200px;
-	}
-	.redes{
-		color:black;
-		margin-right:20px;
-		font-size:200%;
-	}
-	.redes:hover{
-		color:#5BC800;
-		font-size:200%;
-	}
-	.icono{
-		font-size:300%;
-		margin-right:10px;
-	}
-	.icono:hover{
-		color:#5BC800;
-		transition: 1s;
-	}
-	.tooltip {
-		position: relative;
-		display: inline-block;
-	}
-	.tooltip .tooltiptext {
-		visibility: hidden;
-		width: auto;
-		background-color: black;
-		color: #fff;
-		text-align: center;
-		border-radius: 5px;
-		padding: 7px;
-		position: absolute;
-		z-index: 1;
-		font-size:30%;
-		top: 50px;
-		left: -10px;
-	}
-	.tooltip:hover .tooltiptext {
-		visibility: visible;
-	}
-	@media screen and (max-width:880px){
-		.icono{
-			font-size:200%;
-		}
-	}
-	@media screen and (max-width:682px){
-		.icono{
-			font-size:150%;
-		}
-	}
-	@media screen and (max-width:560px){
-		.icono{
-			font-size:100%;
-		}
-	}
-	@media screen and (max-width:500px){
-		.imagen-modal{
-			max-width:300px;
-		}
-		.texto{
-			font-size:80%;
-		}
-	}
-</style>
-<div class="letra-grande"><i class="far fa-user"></i> Desarrollador</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="author" content="Juan Felipe Valencia Murillo">
+	<meta name="copyright" content="Juan Felipe Valencia Murillo">
+	<meta name="description" content="PROES - Programación en Español">
+	<meta name="keywords" content="desarrollador,proes,programacion en español,programacion,español">
+	<meta name="robots" content="Index,Follow">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<title>Desarrollador - PROES - Programación en Español</title>
+	<link rel="icon" type="image/png" href="../imagenes/logo_proes.png"/>
+	<link rel="stylesheet" href="../css/fontawesome-5.4.1.min.css"/>
+	<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">-->
+	<link rel="stylesheet" href="../css/principal.css"/>
+</head>
+<body>
+<div id="proes">
+<encabezado></encabezado>
+<div class="contenido">
 <div class="contenedor" style="display:block;">
 	<center>
 	<div class="con-info">
 		<div class="enc-info">
-			<center><img src="imagenes/perfil.jpg" onclick="abrirModal('foto_perfil')" class="perfil"/></center>
+			<center><img src="../imagenes/perfil.jpg" onclick="abrirModal('foto_perfil')" class="perfil"/></center>
 		</div>
 		<div class="info texto">
 			<p>Hola, mi nombre es Juan Felipe Valencia Murillo, nací en la ciudad de Santiago de Cali (Colombia) el 13 de enero de 1998.</p>
@@ -172,7 +108,7 @@
 </div>
 <div id="foto_perfil" class="modal-imagen">
 	<div onclick="cerrarModal('foto_perfil')" class="cerrar-modal-imagen">&times;</div>
-	<center><img src="imagenes/perfil.jpg" onclick="abrirModal('foto_perfil')" class="imagen-modal"/></center>
+	<center><img src="../imagenes/perfil.jpg" onclick="abrirModal('foto_perfil')" class="imagen-modal"/></center>
 </div>
 <!--Uso del modal-->
 <!--<button onclick="abrirModal('miModal')">Abrir Modal</button>
@@ -182,3 +118,101 @@
 		<p>Algún texto en el modal...</p>
 	</div>
 </div>-->
+</div>
+<pie-pagina></pie-pagina>
+</div>
+<script type="text/javascript" src="../js/vue-2.5.16.js"></script>
+<script type="text/javascript" src="../componentes/encabezado.js"></script>
+<script type="text/javascript" src="../componentes/pie-pagina.js"></script>
+
+<script type="text/javascript">
+new Vue({
+	el:'#proes'
+});
+</script>
+
+<style type="text/css">
+	.con-info{
+		width:auto;
+		max-width:900px;
+	}
+	.enc-info{ 
+		width:auto;
+		text-align:center;
+	}
+	.info{
+		width:auto;
+		height:auto;
+		text-align:justify;
+	}
+	.perfil{
+		border-radius:50%;
+		border:5px solid #5BC800;
+		cursor:pointer;
+		width:200px;
+		height:200px;
+	}
+	.redes{
+		color:black;
+		margin-right:20px;
+		font-size:200%;
+	}
+	.redes:hover{
+		color:#5BC800;
+		font-size:200%;
+	}
+	.icono{
+		font-size:300%;
+		margin-right:10px;
+	}
+	.icono:hover{
+		color:#5BC800;
+		transition: 1s;
+	}
+	.tooltip {
+		position: relative;
+		display: inline-block;
+	}
+	.tooltip .tooltiptext {
+		visibility: hidden;
+		width: auto;
+		background-color: black;
+		color: #fff;
+		text-align: center;
+		border-radius: 5px;
+		padding: 7px;
+		position: absolute;
+		z-index: 1;
+		font-size:30%;
+		top: 50px;
+		left: -10px;
+	}
+	.tooltip:hover .tooltiptext {
+		visibility: visible;
+	}
+	@media screen and (max-width:880px){
+		.icono{
+			font-size:200%;
+		}
+	}
+	@media screen and (max-width:682px){
+		.icono{
+			font-size:150%;
+		}
+	}
+	@media screen and (max-width:560px){
+		.icono{
+			font-size:100%;
+		}
+	}
+	@media screen and (max-width:500px){
+		.imagen-modal{
+			max-width:300px;
+		}
+		.texto{
+			font-size:80%;
+		}
+	}
+</style>
+</body>
+</html>

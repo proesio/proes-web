@@ -5,6 +5,9 @@
 *:focus{
 	outline:none;
 }
+html{
+	scroll-behavior:smooth;
+}
 body{
 	margin:0px;
 	height:100%;
@@ -270,4 +273,25 @@ footer>div>a:hover{
 		margin:auto;
 		margin-bottom:20px;
 	}
+}
+.accion-subir{
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	display:flex;
+    justify-content:center;
+    align-content:center;
+	flex-direction:column;
+	width:50px;
+	height:50px;
+	background-color:gray;
+	border-radius:5px;
+	cursor:pointer;
+	font-size:150%;
+	opacity:0.5;
+	transition:0.5s;
+	visibility:hidden;
+}
+.accion-subir:hover{
+	opacity:0.8;
 }
