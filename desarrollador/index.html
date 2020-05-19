@@ -10,10 +10,93 @@
 	<meta name="robots" content="Index,Follow">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 	<title>Desarrollador - PROES - Programación en Español</title>
-	<link rel="icon" type="image/png" href="../imagenes/logo_proes.png"/>
+	<link rel="icon" type="image/png" href="../imagenes/proes-logo-transparente.png"/>
 	<link rel="stylesheet" href="../css/fontawesome-5.4.1.min.css"/>
 	<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">-->
 	<link rel="stylesheet" href="../css/principal.css"/>
+	<style type="text/css">
+		.con-info{
+			width:auto;
+			max-width:900px;
+		}
+		.enc-info{ 
+			width:auto;
+			text-align:center;
+		}
+		.info{
+			width:auto;
+			height:auto;
+			text-align:justify;
+		}
+		.perfil{
+			border-radius:50%;
+			border:5px solid #5BC800;
+			cursor:pointer;
+			width:200px;
+			height:200px;
+		}
+		.redes{
+			color:black;
+			margin-right:20px;
+			font-size:200%;
+		}
+		.redes:hover{
+			color:#5BC800;
+			font-size:200%;
+		}
+		.icono{
+			font-size:300%;
+			margin-right:10px;
+		}
+		.icono:hover{
+			color:#5BC800;
+			transition: 1s;
+		}
+		.tooltip {
+			position: relative;
+			display: inline-block;
+		}
+		.tooltip .tooltiptext {
+			visibility: hidden;
+			width: auto;
+			background-color: black;
+			color: #fff;
+			text-align: center;
+			border-radius: 5px;
+			padding: 7px;
+			position: absolute;
+			z-index: 1;
+			font-size:30%;
+			top: 50px;
+			left: -10px;
+		}
+		.tooltip:hover .tooltiptext {
+			visibility: visible;
+		}
+		@media screen and (max-width:880px){
+			.icono{
+				font-size:200%;
+			}
+		}
+		@media screen and (max-width:682px){
+			.icono{
+				font-size:150%;
+			}
+		}
+		@media screen and (max-width:560px){
+			.icono{
+				font-size:100%;
+			}
+		}
+		@media screen and (max-width:500px){
+			.imagen-modal{
+				max-width:300px;
+			}
+			.texto{
+				font-size:80%;
+			}
+		}
+	</style>
 </head>
 <body>
 <div id="proes">
@@ -23,7 +106,7 @@
 	<center>
 	<div class="con-info">
 		<div class="enc-info">
-			<center><img src="../imagenes/perfil.jpg" onclick="abrirModal('foto_perfil')" class="perfil"/></center>
+			<center><img src="../imagenes/desarrollador-foto.jpg" onclick="abrirModal('foto_perfil')" class="perfil"/></center>
 		</div>
 		<div class="info texto">
 			<p>Hola, mi nombre es Juan Felipe Valencia Murillo, nací en la ciudad de Santiago de Cali (Colombia) el 13 de enero de 1998.</p>
@@ -100,16 +183,16 @@
 			Mis Redes Sociales
 		</div>
 		<div class="info" style="text-align:center;">
-			<a href="https://www.facebook.com/juanfelipe.valencia.503/" class="redes" target="_blank"><i class="fab fa-facebook-f"></i></a>
-			<a href="https://www.instagram.com/juanfe0245/" target="_blank" class="redes" ><i class="fab fa-instagram"></i></a>
-			<a href="https://twitter.com/jfvalenciam" target="_blank" class="redes" ><i class="fab fa-twitter"></i></a>
+			<a href="https://www.facebook.com/jfvalenciam/" class="redes" target="_blank"><i class="fab fa-facebook-f"></i></a>
+			<a href="https://www.instagram.com/jfvalenciamu/" target="_blank" class="redes" ><i class="fab fa-instagram"></i></a>
+			<a href="https://twitter.com/jfvalenciam/" target="_blank" class="redes" ><i class="fab fa-twitter"></i></a>
 		</div>
 	</div>
 	</center>
 </div>
 <div id="foto_perfil" class="modal-imagen">
 	<div onclick="cerrarModal('foto_perfil')" class="cerrar-modal-imagen">&times;</div>
-	<center><img src="../imagenes/perfil.jpg" onclick="abrirModal('foto_perfil')" class="imagen-modal"/></center>
+	<center><img src="../imagenes/desarrollador-foto.jpg" onclick="abrirModal('foto_perfil')" class="imagen-modal"/></center>
 </div>
 <!--Uso del modal-->
 <!--<button onclick="abrirModal('miModal')">Abrir Modal</button>
@@ -132,88 +215,5 @@ new Vue({
 });
 </script>
 
-<style type="text/css">
-	.con-info{
-		width:auto;
-		max-width:900px;
-	}
-	.enc-info{ 
-		width:auto;
-		text-align:center;
-	}
-	.info{
-		width:auto;
-		height:auto;
-		text-align:justify;
-	}
-	.perfil{
-		border-radius:50%;
-		border:5px solid #5BC800;
-		cursor:pointer;
-		width:200px;
-		height:200px;
-	}
-	.redes{
-		color:black;
-		margin-right:20px;
-		font-size:200%;
-	}
-	.redes:hover{
-		color:#5BC800;
-		font-size:200%;
-	}
-	.icono{
-		font-size:300%;
-		margin-right:10px;
-	}
-	.icono:hover{
-		color:#5BC800;
-		transition: 1s;
-	}
-	.tooltip {
-		position: relative;
-		display: inline-block;
-	}
-	.tooltip .tooltiptext {
-		visibility: hidden;
-		width: auto;
-		background-color: black;
-		color: #fff;
-		text-align: center;
-		border-radius: 5px;
-		padding: 7px;
-		position: absolute;
-		z-index: 1;
-		font-size:30%;
-		top: 50px;
-		left: -10px;
-	}
-	.tooltip:hover .tooltiptext {
-		visibility: visible;
-	}
-	@media screen and (max-width:880px){
-		.icono{
-			font-size:200%;
-		}
-	}
-	@media screen and (max-width:682px){
-		.icono{
-			font-size:150%;
-		}
-	}
-	@media screen and (max-width:560px){
-		.icono{
-			font-size:100%;
-		}
-	}
-	@media screen and (max-width:500px){
-		.imagen-modal{
-			max-width:300px;
-		}
-		.texto{
-			font-size:80%;
-		}
-	}
-</style>
 </body>
 </html>

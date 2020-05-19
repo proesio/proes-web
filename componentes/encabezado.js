@@ -2,7 +2,7 @@
 Vue.component('encabezado',{
 	data(){
 		return {
-			host:location.origin+'/proes/'
+			host:location.origin+'/proesio/web-proes/'
 		}
 	},
 	mounted(){
@@ -23,7 +23,7 @@ Vue.component('encabezado',{
 	template:`
 		<header>
 			<div class="logo">
-				<a :href="host"><img :src="host+'imagenes/eslogan_proes.png'" alt="ESLOGAN PROES" style="width:auto; height:50px; margin-top:10px;"/></a>
+				<a :href="host"><img :src="host+'imagenes/proes-eslogan-transparente.png'" alt="ESLOGAN PROES" style="width:auto; height:50px; margin-top:10px;"/></a>
 			</div>
 			<div class="rutas">
 				<a :href="host"><button id="inicio"><i class="fas fa-home"></i> Inicio</button></a>

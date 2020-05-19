@@ -10,30 +10,57 @@
 	<meta name="robots" content="Index,Follow">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 	<title>Proyectos - PROES - Programación en Español</title>
-	<link rel="icon" type="image/png" href="../imagenes/logo_proes.png"/>
+	<link rel="icon" type="image/png" href="../imagenes/proes-logo-transparente.png"/>
 	<link rel="stylesheet" href="../css/fontawesome-5.4.1.min.css"/>
 	<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">-->
 	<link rel="stylesheet" href="../css/principal.css"/>
+	<style type="text/css">
+		.con-info{
+			width:auto;
+			max-width:900px;
+		}
+		.enc-info{ 
+			width:auto;
+			text-align:center;
+		}
+		.info{
+			width:auto;
+			height:auto;
+			text-align:left;
+		}
+		.eslogan{
+			width:25%;
+			height:auto;
+			margin-top:10px;
+		}
+		@media screen and (max-width:600px){
+			.eslogan{
+				width:auto;
+				height:100px;
+				margin-top:10px;
+			}
+		}
+	</style>
 </head>
 <body>
 <div id="proes">
 <encabezado></encabezado>
 <div class="contenido">
-<div class="letra-pequena texto-encabezado"><p>Con estas increíbles herramientas podrás escribir código en español.</p></div>
-<div class="contenedor" style="margin-bottom:50px;">
-	<div class="proyecto">
-		<div class="con-info">
-			<div class="enc-info">
-				PIPE
-			</div>
-			<div class="info">
-				<a href="http://localhost/pipe" style="text-decoration:none" target="_black">
-					<img src="../imagenes/logo_pipe.png" class="logo-proyecto">
-					<div class="descripcion">ORM - Mapeador Objeto Relacionar en español</div>
-				</a>
-			</div>
+<div class="contenedor" style="display:block;">
+	<center>
+	<div class="con-info">
+		<div class="enc-info">
+				<img src="../imagenes/pipe-eslogan-transparente.png" class="eslogan"/>
+		</div>
+		<div class="info texto">
+			<p>
+				PIPE es un ORM - Mapeador Objeto Relacional desarrollado en PHP
+				que permite interactuar con el modelo de las tablas en la base de datos
+				accediendo a métodos escritos en español. <a href="https://proes.tk/pipe" class="vinculo" target="blank">Más información</a>
+			</p>
 		</div>
 	</div>
+	</center>
 </div>
 </div>
 <pie-pagina></pie-pagina>
@@ -48,31 +75,6 @@ new Vue({
 	el:'#proes'
 });
 </script>
-
-<style type="text/css">
-	.proyecto{
-		text-align:center;
-	}
-	.descripcion{
-		font-size:90%;
-		font-weight:bold;
-		color:#363637;
-	}
-	.logo-proyecto{
-		margin-bottom:20px;
-	}
-	.logo-proyecto:hover{
-		box-shadow:0px 1px 2px grey;
-	}
-	.texto-encabezado{
-		margin-top:100px;
-	}
-	@media screen and (max-width:600px){
-		.texto-encabezado{
-			margin-top:290px;
-		}
-	}
-</style>
 
 </body>
 </html>
