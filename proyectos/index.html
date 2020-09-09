@@ -36,7 +36,7 @@
 		}
 		@media screen and (max-width:600px){
 			.eslogan{
-				width:auto;
+				width:90%;
 				height:100px;
 				margin-top:10px;
 			}
@@ -51,13 +51,25 @@
 	<center>
 	<div class="con-info">
 		<div class="enc-info">
+				<img src="../imagenes/escrud-eslogan-transparente.png" class="eslogan"/>
+		</div>
+		<div class="info texto">
+			<p>
+        Escrud - CRUD en Español es una herramienta que genera automáticamente 
+        una interfaz para crear, consultar, editar y eliminar registros de una tabla 
+        en la base de datos por medio de métodos escritos en español. <a href="" id="escrud-url" class="vinculo" target="blank">Más información</a>
+			</p>
+		</div>
+	</div>
+  <div class="con-info">
+		<div class="enc-info">
 				<img src="../imagenes/pipe-eslogan-transparente.png" class="eslogan"/>
 		</div>
 		<div class="info texto">
 			<p>
 				PIPE es un ORM - Mapeador Objeto Relacional desarrollado en PHP
 				que permite interactuar con el modelo de las tablas en la base de datos
-				accediendo a métodos escritos en español. <a href="" id="pipe_url" class="vinculo" target="blank">Más información</a>
+				accediendo a métodos escritos en español. <a href="" id="pipe-url" class="vinculo" target="blank">Más información</a>
 			</p>
 		</div>
 	</div>
@@ -75,11 +87,12 @@
 new Vue({
 	el:'#proes',
 	mounted(){
-		this.asignarUrl('pipe_url');
+		this.asignarUrl('escrud-url', ESCRUD_URL);
+		this.asignarUrl('pipe-url', PIPE_URL);
 	},
 	methods:{
-		asignarUrl(id){
-			document.getElementById(id).href=PIPE_URL;
+		asignarUrl(elementoId, url){
+			document.getElementById(elementoId).href = url;
 		}
 	}
 });
