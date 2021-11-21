@@ -19,11 +19,11 @@ Vue.component('encabezado', {
         this.asignarEstiloBoton(document.getElementById('inicio'));
       }
 
-      if (location.href == `${this.host}proyectos`) {
+      if (location.href.indexOf('proyectos') > -1) {
         this.asignarEstiloBoton(document.getElementById('proyectos'));
       }
 
-      if (location.href == `${this.host}desarrollador`) {
+      if (location.href == `${this.host}desarrollador/`) {
         this.asignarEstiloBoton(document.getElementById('desarrollador'));
       }
     },
