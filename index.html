@@ -1,89 +1,258 @@
-<!--Desarrollado Por Juan Felipe Valencia Murillo.-->
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="author" content="Juan Felipe Valencia Murillo">
   <meta name="copyright" content="Juan Felipe Valencia Murillo">
-  <meta name="description" content="PIPE - ORM en Español">
-  <meta name="keywords" content="inicio,proes,programacion en español,programacion,español">
+  <meta name="description" content="PROES - Programación en Español">
+  <meta name="keywords" content="proes,programacion en español,programacion,español">
   <meta name="robots" content="Index,Follow">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Inicio - PROES - Programación en Español</title>
-  <link rel="icon" type="image/png" href="imagenes/proes-logo-transparente.png" />
-  <link rel="stylesheet" href="css/fontawesome-5.4.1.min.css" />
-  <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">-->
-  <link rel="stylesheet" href="css/principal.css" />
-  <script type="text/javascript" src="js/config.js"></script>
-  <style type="text/css">
-    .portada {
-      width: 100%;
-      height: auto;
-    }
-
-    .enc-info {
-      font-size: 110%;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROES - Programación en Español</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/proes-isotipo-transparente.svg">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
-  <div id="proes">
-    <encabezado></encabezado>
-    <div class="contenido">
-      <img src="imagenes/proes-portada.png" class="portada" />
-      <div class="letra-grande">¡Hola!</div>
-      <div class="letra-mediana">¿Estás iniciando en el desarrollo web?</div>
-      <div class="letra-pequena">
-        <p>Descubre una nueva manera de escribir código totalmente en español y sin esfuerzo.</p>
-      </div>
 
-      <div class="contenedor">
-        <div class="con-info">
-          <div class="enc-info">
-            Nuestro objetivo
-          </div>
-          <div class="info">
-            Nuestro objetivo como plataforma es proporcionar herramientas para el desarrollo web,
-            permitiendo a las personas de habla hispana aprender a desarrollar software
-            de la manera más fácil.
-          </div>
-        </div>
-        <div class="con-info">
-          <div class="enc-info">
-            ¿En qué me beneficia?
-          </div>
-          <div class="info">
-            Nuestras herramientas están pensadas para un público que está aprendiendo desarrollo web,
-            por lo cual, te será fácil aprender y practicar con ellas.
-          </div>
-        </div>
-        <div class="con-info">
-          <div class="enc-info">
-            ¿Cómo puedo contribuir?
-          </div>
-          <div class="info">
-            Nuestras herramientas son de código abierto, permitiendo a las personas
-            que desean contribuir desarrollar actualizaciones, reportar errores y realizar sugerencias
-            por medio de nuestros repositorios en GitHub.
-          </div>
-        </div>
+  <div class="bg-glow"></div>
+
+  <!-- ENCABEZADO -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="/" class="brand">
+        <img style="width: 130px;" src="assets/images/proes-isologo-eslogan.svg">
+      </a>
+
+      <!--<ul class="nav-links">
+        <li><a href="#objetivo" class="nav-link">Objetivo</a></li>
+        <li><a href="#beneficios" class="nav-link">Beneficios</a></li>
+        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+        <li><a href="#contribuir" class="nav-link">Contribuir</a></li>
+      </ul>-->
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle">
+          <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+        </button>
+
+        <a href="https://github.com/proesio" target="_blank" rel="noopener noreferrer" class="btn-personal"
+          title="Ver repositorio en GitHub.">
+          <span>Repositorio</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+          <!--<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>-->
+        </a>
       </div>
     </div>
-    <pie-pagina></pie-pagina>
-  </div>
+  </header>
 
-  <script type="text/javascript" src="js/vue-2.5.16.min.js"></script>
-  <script type="text/javascript" src="componentes/encabezado.js"></script>
-  <script type="text/javascript" src="componentes/pie-pagina.js"></script>
+  <!-- HERO SECTION (OBJETIVO) -->
+  <section id="objetivo" class="hero">
+    <div class="hero-badge">
+      <span>PROES - Programación en Español</span>
+    </div>
+    <h1 class="hero-title">
+      Desarrolla software de la manera <span class="highlight-text">más fácil</span>
+    </h1>
+    <p class="hero-objective">
+      Nuestro objetivo como plataforma es proporcionar herramientas para el desarrollo web, permitiendo a las personas
+      de habla hispana aprender a desarrollar software de la manera más fácil.
+    </p>
+  </section>
 
-  <script type="text/javascript">
-    new Vue({
-      el: '#proes'
-    });
-  </script>
+  <!-- SECCIÓN DE VALOR -->
+  <section id="beneficios" class="info-section">
+    <div class="info-grid">
+      <article class="info-card">
+        <div class="info-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <h3>¿En qué me beneficia?</h3>
+        <p>
+          Nuestras herramientas están pensadas para un público que está aprendiendo desarrollo web, por lo cual, te será
+          fácil aprender y practicar con ellas.
+        </p>
+      </article>
 
+      <article id="contribuir" class="info-card">
+        <div class="info-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </div>
+        <h3>¿Cómo puedo contribuir?</h3>
+        <p>
+          Nuestras herramientas son de código abierto, permitiendo a las personas que desean contribuir desarrollar
+          actualizaciones, reportar errores y realizar sugerencias por medio de nuestros repositorios en GitHub.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE PROYECTOS -->
+  <main id="proyectos" class="projects-section">
+    <div class="section-header">
+      <h2 class="section-title">Ecosistema de proyectos</h2>
+      <p class="section-subtitle">Herramientas de código abierto listas para usar y explorar.</p>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card">
+        <div>
+          <div class="project-header">
+            <div class="project-logo-slot"><img src="assets/images/pipe-isotipo.svg"></div>
+            <h3 class="project-title">PIPE</h3>
+          </div>
+          <p class="project-description">
+            PIPE es un ORM - Mapeador Objeto Relacional desarrollado en PHP, que permite interactuar con el modelo de
+            las tablas en la base de datos accediendo a métodos escritos en español.
+          </p>
+        </div>
+        <div>
+          <div class="project-tags">
+            <span class="tag">PHP</span>
+            <span class="tag">ORM</span>
+            <span class="tag">Open Source</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/proesio/pipe" target="_blank" class="btn-project">GitHub &rarr;</a>
+            <a href="https://pipe.proes.io" target="_blank" class="btn-project"
+              style="color: var(--text-muted);">Docs</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div>
+          <div class="project-header">
+            <div class="project-logo-slot"><img src="assets/images/escrud-isotipo.svg"></div>
+            <h3 class="project-title">Escrud</h3>
+          </div>
+          <p class="project-description">
+            Escrud - CRUD en Español, es una herramienta que genera automáticamente una interfaz para crear, consultar,
+            editar y eliminar registros de una tabla en la base de datos por medio de métodos escritos en español.
+          </p>
+        </div>
+        <div>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JS</span>
+            <span class="tag">PHP</span>
+            <span class="tag">Open Source</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/proesio/escrud" target="_blank" class="btn-project">GitHub &rarr;</a>
+            <a href="https://escrud.proes.io" class="btn-project" target="_blank"
+              style="color: var(--text-muted);">Docs</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div>
+          <div class="project-header">
+            <div class="project-logo-slot"><img src="assets/images/rutalo-isotipo.svg"></div>
+            <h3 class="project-title">Rutalo</h3>
+          </div>
+          <p class="project-description">
+            Rutalo es un enrutador desarrollado en PHP, que permite procesar URL limpias y amigables por medio de
+            métodos escritos en español.
+          </p>
+        </div>
+        <div>
+          <div class="project-tags">
+            <span class="tag">PHP</span>
+            <span class="tag">Enrutador</span>
+            <span class="tag">Open Source</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/proesio/rutalo" target="_blank" class="btn-project">GitHub &rarr;</a>
+            <a href="https://rutalo.proes.io" target="_blank" class="btn-project"
+              style="color: var(--text-muted);">Docs</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- FOOTER ACTUALIZADO -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-info">
+          <a href="/" class="brand">
+            <img style="width: 130px;" src="assets/images/proes-isologo-eslogan.svg">
+          </a>
+          <p class="footer-desc">
+            Herramientas de desarrollo web accesibles y de código abierto para la comunidad hispanohablante.
+          </p>
+        </div>
+
+        <!-- REDES SOCIALES -->
+        <div class="footer-socials">
+          <!-- Facebook -->
+          <a href="https://facebook.com/proesio" target="_blank" rel="noopener noreferrer" class="social-link"
+            aria-label="Siguenos en Facebook" title="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/channel/UCk5pHq8tVsn0RdGoGB56QQg" target="_blank" rel="noopener noreferrer"
+            class="social-link" aria-label="Suscripciones en YouTube" title="YouTube">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+              </path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- COPYRIGHT & CREDITING -->
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2018 - <span id="copyrightYear"></span> <a href="https://jfvalenciam.proes.io"
+            target="_blank" rel="noopener noreferrer" class="footer-link">Juan Felipe Valencia Murillo</a></p>
+        <!--<p>Sitio personal: <a href="https://tu-pagina-personal.com" target="_blank" rel="noopener noreferrer"
+            class="footer-link">Ver Portafolio</a></p>-->
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón "Volver arriba" -->
+  <button id="scrollToTopBtn" aria-label="Volver arriba" title="Volver arriba">
+    <!-- Ícono de flecha SVG elegante -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6" />
+    </svg>
+  </button>
+
+  <!-- JAVASCRIPT -->
+  <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 
 </html>
